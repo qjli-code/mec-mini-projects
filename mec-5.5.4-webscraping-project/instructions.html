@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<title>Scrapy Mini Project</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="scrapy-mini-project">
+<span id="intro-tutorial"></span>
+<h1 class="title">Scrapy Mini Project</h1>
+
+<p>This mini-project is simply a tutorial on how to build scrapy spiders, and is
+for most part a copy of the original excellent tutorial available at: <a class="reference external" href="https://docs.scrapy.org/en/latest/intro/tutorial.html">https://docs.scrapy.org/en/latest/intro/tutorial.html</a></p>
+<p>In this tutorial, we'll assume that Scrapy is already installed on your system.
+If that's not the case, please simply run <a href="#id75"><span class="problematic" id="id76">`pip install scrapy`_</span></a>.</p>
+<p>We are going to scrape <a class="reference external" href="http://quotes.toscrape.com/">quotes.toscrape.com</a>, an
+synthetic website that lists quotes from famous authors.</p>
+<p>This tutorial will walk you through these tasks:</p>
+<ol class="arabic simple">
+<li>Creating a new Scrapy project</li>
+<li>Writing a spider to crawl a site and extract data</li>
+<li>Exporting the scraped data using the command line</li>
+<li>Changing spider to recursively follow links</li>
+<li>Using spider arguments</li>
+<li>Load the scraped data into a SQLlite3 database</li>
+</ol>
+<div class="section" id="creating-a-project">
+<h1>Creating a project</h1>
+<p>Before you start scraping, you will have to set up a new Scrapy project. Enter a
+directory where you'd like to store your code and run:</p>
+<pre class="literal-block">
+scrapy startproject scrapy-mini-project
+</pre>
+<p>This will create a <tt class="docutils literal"><span class="pre">scrapy-mini-project</span></tt> directory with the following contents:</p>
+<pre class="literal-block">
+scrapy-mini-project/
+    scrapy.cfg            # deploy configuration file
+
+    tutorial/             # project's Python module, you'll import your code from here
+        __init__.py
+
+        items.py          # project items definition file
+
+        middlewares.py    # project middlewares file
+
+        pipelines.py      # project pipelines file
+
+        settings.py       # project settings file
+
+        spiders/          # a directory where you'll later put your spiders
+            __init__.py
+</pre>
+</div>
+<div class="section" id="your-first-spider">
+<h1>Your first Spider</h1>
+<p>Spiders are classes that you define and that Scrapy uses to scrape information
+from a website (or a group of websites). They must subclass
+<a href="#id1"><span class="problematic" id="id2">:class:`~scrapy.spiders.Spider`</span></a> and define the initial requests to make,
+optionally how to follow links in the pages, and how to parse the downloaded
+page content to extract data.</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 57); <em><a href="#id2">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+<p>This is the code for our first Spider. Save it in a file named
+<tt class="docutils literal">quotes_spider.py</tt> under the <tt class="docutils literal">tutorial/spiders</tt> directory in your project:</p>
+<pre class="literal-block">
+import scrapy
+
+
+class QuotesSpider(scrapy.Spider):
+    name = &quot;quotes&quot;
+
+    def start_requests(self):
+        urls = [
+            'http://quotes.toscrape.com/page/1/',
+            'http://quotes.toscrape.com/page/2/',
+        ]
+        for url in urls:
+            yield scrapy.Request(url=url, callback=self.parse)
+
+    def parse(self, response):
+        page = response.url.split(&quot;/&quot;)[-2]
+        filename = 'quotes-%s.html' % page
+        with open(filename, 'wb') as f:
+            f.write(response.body)
+        self.log('Saved file %s' % filename)
+</pre>
+<p>As you can see, our Spider subclasses <a href="#id3"><span class="problematic" id="id4">:class:`scrapy.Spider &lt;scrapy.spiders.Spider&gt;`</span></a>
+and defines some attributes and methods:</p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 88); <em><a href="#id4">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+<ul>
+<li><p class="first"><a href="#id5"><span class="problematic" id="id6">:attr:`~scrapy.spiders.Spider.name`</span></a>: identifies the Spider. It must be
+unique within a project, that is, you can't set the same name for different
+Spiders.</p>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 91); <em><a href="#id6">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;attr&quot;.</p>
+</div>
+</li>
+<li><p class="first"><a href="#id7"><span class="problematic" id="id8">:meth:`~scrapy.spiders.Spider.start_requests`</span></a>: must return an iterable of
+Requests (you can return a list of requests or write a generator function)
+which the Spider will begin to crawl from. Subsequent requests will be
+generated successively from these initial requests.</p>
+<div class="system-message" id="id7">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 95); <em><a href="#id8">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;meth&quot;.</p>
+</div>
+</li>
+<li><p class="first"><a href="#id9"><span class="problematic" id="id10">:meth:`~scrapy.spiders.Spider.parse`</span></a>: a method that will be called to handle
+the response downloaded for each of the requests made. The response parameter
+is an instance of <a href="#id11"><span class="problematic" id="id12">:class:`~scrapy.http.TextResponse`</span></a> that holds
+the page content and has further helpful methods to handle it.</p>
+<div class="system-message" id="id9">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 100); <em><a href="#id10">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;meth&quot;.</p>
+</div>
+<div class="system-message" id="id11">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 100); <em><a href="#id12">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;class&quot;.</p>
+</div>
+<p>The <a href="#id13"><span class="problematic" id="id14">:meth:`~scrapy.spiders.Spider.parse`</span></a> method usually parses the response, extracting
+the scraped data as dicts and also finding new URLs to
+follow and creating new requests (<a href="#id15"><span class="problematic" id="id16">:class:`~scrapy.http.Request`</span></a>) from them.</p>
+<div class="system-message" id="id13">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 105); <em><a href="#id14">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;meth&quot;.</p>
+</div>
+<div class="system-message" id="id15">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 105); <em><a href="#id16">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;class&quot;.</p>
+</div>
+</li>
+</ul>
+<div class="section" id="how-to-run-our-spider">
+<h2>How to run our spider</h2>
+<p>To put our spider to work, go to the project's top level directory and run:</p>
+<pre class="literal-block">
+scrapy crawl quotes
+</pre>
+<p>This command runs the spider with name <tt class="docutils literal">quotes</tt> that we've just added, that
+will send some requests for the <tt class="docutils literal">quotes.toscrape.com</tt> domain. You will get an output
+similar to this:</p>
+<pre class="literal-block">
+... (omitted for brevity)
+2016-12-16 21:24:05 [scrapy.core.engine] INFO: Spider opened
+2016-12-16 21:24:05 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-12-16 21:24:05 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-12-16 21:24:05 [scrapy.core.engine] DEBUG: Crawled (404) &lt;GET http://quotes.toscrape.com/robots.txt&gt; (referer: None)
+2016-12-16 21:24:05 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://quotes.toscrape.com/page/1/&gt; (referer: None)
+2016-12-16 21:24:05 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://quotes.toscrape.com/page/2/&gt; (referer: None)
+2016-12-16 21:24:05 [quotes] DEBUG: Saved file quotes-1.html
+2016-12-16 21:24:05 [quotes] DEBUG: Saved file quotes-2.html
+2016-12-16 21:24:05 [scrapy.core.engine] INFO: Closing spider (finished)
+...
+</pre>
+<p>Now, check the files in the current directory. You should notice that two new
+files have been created: <em>quotes-1.html</em> and <em>quotes-2.html</em>, with the content
+for the respective URLs, as our <tt class="docutils literal">parse</tt> method instructs.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are wondering why we haven't parsed the HTML yet, hold
+on, we will cover that soon.</p>
+</div>
+<div class="section" id="what-just-happened-under-the-hood">
+<h3>What just happened under the hood?</h3>
+<p>Scrapy schedules the <a href="#id17"><span class="problematic" id="id18">:class:`scrapy.Request &lt;scrapy.http.Request&gt;`</span></a> objects
+returned by the <tt class="docutils literal">start_requests</tt> method of the Spider. Upon receiving a
+response for each one, it instantiates <a href="#id19"><span class="problematic" id="id20">:class:`~scrapy.http.Response`</span></a> objects
+and calls the callback method associated with the request (in this case, the
+<tt class="docutils literal">parse</tt> method) passing the response as argument.</p>
+<div class="system-message" id="id17">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 143); <em><a href="#id18">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+<div class="system-message" id="id19">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 143); <em><a href="#id20">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+</div>
+</div>
+<div class="section" id="a-shortcut-to-the-start-requests-method">
+<h2>A shortcut to the start_requests method</h2>
+<p>Instead of implementing a <a href="#id21"><span class="problematic" id="id22">:meth:`~scrapy.spiders.Spider.start_requests`</span></a> method
+that generates <a href="#id23"><span class="problematic" id="id24">:class:`scrapy.Request &lt;scrapy.http.Request&gt;`</span></a> objects from URLs,
+you can just define a <a href="#id25"><span class="problematic" id="id26">:attr:`~scrapy.spiders.Spider.start_urls`</span></a> class attribute
+with a list of URLs. This list will then be used by the default implementation
+of <a href="#id27"><span class="problematic" id="id28">:meth:`~scrapy.spiders.Spider.start_requests`</span></a> to create the initial requests
+for your spider:</p>
+<div class="system-message" id="id21">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 152); <em><a href="#id22">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<div class="system-message" id="id23">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 152); <em><a href="#id24">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+<div class="system-message" id="id25">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 152); <em><a href="#id26">backlink</a></em></p>
+Unknown interpreted text role &quot;attr&quot;.</div>
+<div class="system-message" id="id27">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 152); <em><a href="#id28">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<pre class="literal-block">
+import scrapy
+
+
+class QuotesSpider(scrapy.Spider):
+    name = &quot;quotes&quot;
+    start_urls = [
+        'http://quotes.toscrape.com/page/1/',
+        'http://quotes.toscrape.com/page/2/',
+    ]
+
+    def parse(self, response):
+        page = response.url.split(&quot;/&quot;)[-2]
+        filename = 'quotes-%s.html' % page
+        with open(filename, 'wb') as f:
+            f.write(response.body)
+</pre>
+<p>The <a href="#id29"><span class="problematic" id="id30">:meth:`~scrapy.spiders.Spider.parse`</span></a> method will be called to handle each
+of the requests for those URLs, even though we haven't explicitly told Scrapy
+to do so. This happens because <a href="#id31"><span class="problematic" id="id32">:meth:`~scrapy.spiders.Spider.parse`</span></a> is Scrapy's
+default callback method, which is called for requests without an explicitly
+assigned callback.</p>
+<div class="system-message" id="id29">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 175); <em><a href="#id30">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<div class="system-message" id="id31">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 175); <em><a href="#id32">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+</div>
+<div class="section" id="extracting-data">
+<h2>Extracting data</h2>
+<p>The best way to learn how to extract data with Scrapy is trying selectors
+using the <a href="#id33"><span class="problematic" id="id34">:ref:`Scrapy shell &lt;topics-shell&gt;`</span></a>. Run:</p>
+<div class="system-message" id="id33">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 185); <em><a href="#id34">backlink</a></em></p>
+Unknown interpreted text role &quot;ref&quot;.</div>
+<pre class="literal-block">
+scrapy shell 'http://quotes.toscrape.com/page/1/'
+</pre>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Remember to always enclose urls in quotes when running Scrapy shell from
+command-line, otherwise urls containing arguments (i.e. <tt class="docutils literal">&amp;</tt> character)
+will not work.</p>
+<p>On Windows, use double quotes instead:</p>
+<pre class="last literal-block">
+scrapy shell &quot;http://quotes.toscrape.com/page/1/&quot;
+</pre>
+</div>
+<p>You will see something like:</p>
+<pre class="literal-block">
+[ ... Scrapy log here ... ]
+2016-09-19 12:09:27 [scrapy.core.engine] DEBUG: Crawled (200) &lt;GET http://quotes.toscrape.com/page/1/&gt; (referer: None)
+[s] Available Scrapy objects:
+[s]   scrapy     scrapy module (contains scrapy.Request, scrapy.Selector, etc)
+[s]   crawler    &lt;scrapy.crawler.Crawler object at 0x7fa91d888c90&gt;
+[s]   item       {}
+[s]   request    &lt;GET http://quotes.toscrape.com/page/1/&gt;
+[s]   response   &lt;200 http://quotes.toscrape.com/page/1/&gt;
+[s]   settings   &lt;scrapy.settings.Settings object at 0x7fa91d888c10&gt;
+[s]   spider     &lt;DefaultSpider 'default' at 0x7fa91c8af990&gt;
+[s] Useful shortcuts:
+[s]   shelp()           Shell help (print this help)
+[s]   fetch(req_or_url) Fetch request (or URL) and update local objects
+[s]   view(response)    View response in a browser
+</pre>
+<p>Using the shell, you can try selecting elements using <a class="reference external" href="https://www.w3.org/TR/selectors">CSS</a> with the response
+object:</p>
+<!-- invisible-code-block: python
+
+response = load_response('http://quotes.toscrape.com/page/1/', 'quotes1.html') -->
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css('title')
+[&lt;Selector xpath='descendant-or-self::title' data='&lt;title&gt;Quotes to Scrape&lt;/title&gt;'&gt;]
+</pre>
+<p>The result of running <tt class="docutils literal"><span class="pre">response.css('title')</span></tt> is a list-like object called
+<a href="#id35"><span class="problematic" id="id36">:class:`~scrapy.selector.SelectorList`</span></a>, which represents a list of
+<a href="#id37"><span class="problematic" id="id38">:class:`~scrapy.selector.Selector`</span></a> objects that wrap around XML/HTML elements
+and allow you to run further queries to fine-grain the selection or extract the
+data.</p>
+<div class="system-message" id="id35">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 227); <em><a href="#id36">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+<div class="system-message" id="id37">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 227); <em><a href="#id38">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+<p>To extract the text from the title above, you can do:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css('title::text').getall()
+['Quotes to Scrape']
+</pre>
+<p>There are two things to note here: one is that we've added <tt class="docutils literal">::text</tt> to the
+CSS query, to mean we want to select only the text elements directly inside
+<tt class="docutils literal">&lt;title&gt;</tt> element.  If we don't specify <tt class="docutils literal">::text</tt>, we'd get the full title
+element, including its tags:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css('title').getall()
+['&lt;title&gt;Quotes to Scrape&lt;/title&gt;']
+</pre>
+<p>The other thing is that the result of calling <tt class="docutils literal">.getall()</tt> is a list: it is
+possible that a selector returns more than one result, so we extract them all.
+When you know you just want the first result, as in this case, you can do:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css('title::text').get()
+'Quotes to Scrape'
+</pre>
+<p>As an alternative, you could've written:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css('title::text')[0].get()
+'Quotes to Scrape'
+</pre>
+<p>However, using <tt class="docutils literal">.get()</tt> directly on a <a href="#id39"><span class="problematic" id="id40">:class:`~scrapy.selector.SelectorList`</span></a>
+instance avoids an <tt class="docutils literal">IndexError</tt> and returns <tt class="docutils literal">None</tt> when it doesn't
+find any element matching the selection.</p>
+<div class="system-message" id="id39">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 258); <em><a href="#id40">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+<p>There's a lesson here: for most scraping code, you want it to be resilient to
+errors due to things not being found on a page, so that even if some parts fail
+to be scraped, you can at least get <strong>some</strong> data.</p>
+<p>Besides the <a href="#id41"><span class="problematic" id="id42">:meth:`~scrapy.selector.SelectorList.getall`</span></a> and
+<a href="#id43"><span class="problematic" id="id44">:meth:`~scrapy.selector.SelectorList.get`</span></a> methods, you can also use
+the <a href="#id45"><span class="problematic" id="id46">:meth:`~scrapy.selector.SelectorList.re`</span></a> method to extract using <a class="reference external" href="https://docs.python.org/3/library/re.html">regular
+expressions</a>:</p>
+<div class="system-message" id="id41">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 266); <em><a href="#id42">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<div class="system-message" id="id43">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 266); <em><a href="#id44">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<div class="system-message" id="id45">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 266); <em><a href="#id46">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css('title::text').re(r'Quotes.*')
+['Quotes to Scrape']
+&gt;&gt;&gt; response.css('title::text').re(r'Q\w+')
+['Quotes']
+&gt;&gt;&gt; response.css('title::text').re(r'(\w+) to (\w+)')
+['Quotes', 'Scrape']
+</pre>
+<p>In order to find the proper CSS selectors to use, you might find useful opening
+the response page from the shell in your web browser using <tt class="docutils literal">view(response)</tt>.
+You can use your browser's developer tools to inspect the HTML and come up
+with a selector (see <a href="#id47"><span class="problematic" id="id48">:ref:`topics-developer-tools`</span></a>).</p>
+<div class="system-message" id="id47">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 278); <em><a href="#id48">backlink</a></em></p>
+Unknown interpreted text role &quot;ref&quot;.</div>
+<p><a class="reference external" href="https://selectorgadget.com/">Selector Gadget</a> is also a nice tool to quickly find CSS selector for
+visually selected elements, which works in many browsers.</p>
+<div class="section" id="xpath-a-brief-intro">
+<h3>XPath: a brief intro</h3>
+<p>Besides <a class="reference external" href="https://www.w3.org/TR/selectors">CSS</a>, Scrapy selectors also support using <a class="reference external" href="https://www.w3.org/TR/xpath/all/">XPath</a> expressions:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.xpath('//title')
+[&lt;Selector xpath='//title' data='&lt;title&gt;Quotes to Scrape&lt;/title&gt;'&gt;]
+&gt;&gt;&gt; response.xpath('//title/text()').get()
+'Quotes to Scrape'
+</pre>
+<p>XPath expressions are very powerful, and are the foundation of Scrapy
+Selectors. In fact, CSS selectors are converted to XPath under-the-hood. You
+can see that if you read closely the text representation of the selector
+objects in the shell.</p>
+<p>While perhaps not as popular as CSS selectors, XPath expressions offer more
+power because besides navigating the structure, it can also look at the
+content. Using XPath, you're able to select things like: <em>select the link
+that contains the text &quot;Next Page&quot;</em>. This makes XPath very fitting to the task
+of scraping, and we encourage you to learn XPath even if you already know how to
+construct CSS selectors, it will make scraping much easier.</p>
+<p>We won't cover much of XPath here, but you can read more about <a href="#id49"><span class="problematic" id="id50">:ref:`using XPath
+with Scrapy Selectors here &lt;topics-selectors&gt;`</span></a>. To learn more about XPath, we
+recommend <a class="reference external" href="http://zvon.org/comp/r/tut-XPath_1.html">this tutorial to learn XPath through examples</a>, and <a class="reference external" href="http://plasmasturm.org/log/xpath101/">this tutorial to learn &quot;how
+to think in XPath&quot;</a>.</p>
+<div class="system-message" id="id49">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 312); <em><a href="#id50">backlink</a></em></p>
+Unknown interpreted text role &quot;ref&quot;.</div>
+</div>
+<div class="section" id="extracting-quotes-and-authors">
+<h3>Extracting quotes and authors</h3>
+<p>Now that you know a bit about selection and extraction, let's complete our
+spider by writing the code to extract the quotes from the web page.</p>
+<p>Each quote in <a class="reference external" href="http://quotes.toscrape.com">http://quotes.toscrape.com</a> is represented by HTML elements that look
+like this:</p>
+<pre class="code html literal-block">
+<span class="punctuation">&lt;</span><span class="name tag">div</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;quote&quot;</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;</span><span class="name tag">span</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;text&quot;</span><span class="punctuation">&gt;</span>“The world as we have created it is a process of our
+    thinking. It cannot be changed without changing our thinking.”<span class="punctuation">&lt;/</span><span class="name tag">span</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;</span><span class="name tag">span</span><span class="punctuation">&gt;</span>
+        by <span class="punctuation">&lt;</span><span class="name tag">small</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;author&quot;</span><span class="punctuation">&gt;</span>Albert Einstein<span class="punctuation">&lt;/</span><span class="name tag">small</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="name tag">a</span> <span class="name attribute">href</span><span class="operator">=</span><span class="literal string">&quot;/author/Albert-Einstein&quot;</span><span class="punctuation">&gt;</span>(about)<span class="punctuation">&lt;/</span><span class="name tag">a</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;/</span><span class="name tag">span</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;</span><span class="name tag">div</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;tags&quot;</span><span class="punctuation">&gt;</span>
+        Tags:
+        <span class="punctuation">&lt;</span><span class="name tag">a</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;tag&quot;</span> <span class="name attribute">href</span><span class="operator">=</span><span class="literal string">&quot;/tag/change/page/1/&quot;</span><span class="punctuation">&gt;</span>change<span class="punctuation">&lt;/</span><span class="name tag">a</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="name tag">a</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;tag&quot;</span> <span class="name attribute">href</span><span class="operator">=</span><span class="literal string">&quot;/tag/deep-thoughts/page/1/&quot;</span><span class="punctuation">&gt;</span>deep-thoughts<span class="punctuation">&lt;/</span><span class="name tag">a</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="name tag">a</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;tag&quot;</span> <span class="name attribute">href</span><span class="operator">=</span><span class="literal string">&quot;/tag/thinking/page/1/&quot;</span><span class="punctuation">&gt;</span>thinking<span class="punctuation">&lt;/</span><span class="name tag">a</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="name tag">a</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;tag&quot;</span> <span class="name attribute">href</span><span class="operator">=</span><span class="literal string">&quot;/tag/world/page/1/&quot;</span><span class="punctuation">&gt;</span>world<span class="punctuation">&lt;/</span><span class="name tag">a</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;/</span><span class="name tag">div</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;/</span><span class="name tag">div</span><span class="punctuation">&gt;</span>
+</pre>
+<p>Let's open up scrapy shell and play a bit to find out how to extract the data
+we want:</p>
+<pre class="literal-block">
+$ scrapy shell 'http://quotes.toscrape.com'
+</pre>
+<p>We get a list of selectors for the quote HTML elements with:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css(&quot;div.quote&quot;)
+[&lt;Selector xpath=&quot;descendant-or-self::div[&#64;class and contains(concat(' ', normalize-space(&#64;class), ' '), ' quote ')]&quot; data='&lt;div class=&quot;quote&quot; itemscope itemtype...'&gt;,
+ &lt;Selector xpath=&quot;descendant-or-self::div[&#64;class and contains(concat(' ', normalize-space(&#64;class), ' '), ' quote ')]&quot; data='&lt;div class=&quot;quote&quot; itemscope itemtype...'&gt;,
+ ...]
+</pre>
+<p>Each of the selectors returned by the query above allows us to run further
+queries over their sub-elements. Let's assign the first selector to a
+variable, so that we can run our CSS selectors directly on a particular quote:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; quote = response.css(&quot;div.quote&quot;)[0]
+</pre>
+<p>Now, let's extract <tt class="docutils literal">text</tt>, <tt class="docutils literal">author</tt> and the <tt class="docutils literal">tags</tt> from that quote
+using the <tt class="docutils literal">quote</tt> object we just created:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; text = quote.css(&quot;span.text::text&quot;).get()
+&gt;&gt;&gt; text
+'“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”'
+&gt;&gt;&gt; author = quote.css(&quot;small.author::text&quot;).get()
+&gt;&gt;&gt; author
+'Albert Einstein'
+</pre>
+<p>Given that the tags are a list of strings, we can use the <tt class="docutils literal">.getall()</tt> method
+to get all of them:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; tags = quote.css(&quot;div.tags a.tag::text&quot;).getall()
+&gt;&gt;&gt; tags
+['change', 'deep-thoughts', 'thinking', 'world']
+</pre>
+<!-- invisible-code-block: python
+
+from sys import version_info -->
+<!-- skip: next if(version_info < (3, 6), reason="Only Python 3.6+ dictionaries match the output") -->
+<p>Having figured out how to extract each bit, we can now iterate over all the
+quotes elements and put them together into a Python dictionary:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; for quote in response.css(&quot;div.quote&quot;):
+...     text = quote.css(&quot;span.text::text&quot;).get()
+...     author = quote.css(&quot;small.author::text&quot;).get()
+...     tags = quote.css(&quot;div.tags a.tag::text&quot;).getall()
+...     print(dict(text=text, author=author, tags=tags))
+{'text': '“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”', 'author': 'Albert Einstein', 'tags': ['change', 'deep-thoughts', 'thinking', 'world']}
+{'text': '“It is our choices, Harry, that show what we truly are, far more than our abilities.”', 'author': 'J.K. Rowling', 'tags': ['abilities', 'choices']}
+...
+</pre>
+</div>
+</div>
+<div class="section" id="extracting-data-in-our-spider">
+<h2>Extracting data in our spider</h2>
+<p>Let's get back to our spider. Until now, it doesn't extract any data in
+particular, just saves the whole HTML page to a local file. Let's integrate the
+extraction logic above into our spider.</p>
+<p>A Scrapy spider typically generates many dictionaries containing the data
+extracted from the page. To do that, we use the <tt class="docutils literal">yield</tt> Python keyword
+in the callback, as you can see below:</p>
+<pre class="literal-block">
+import scrapy
+
+
+class QuotesSpider(scrapy.Spider):
+    name = &quot;quotes&quot;
+    start_urls = [
+        'http://quotes.toscrape.com/page/1/',
+        'http://quotes.toscrape.com/page/2/',
+    ]
+
+    def parse(self, response):
+        for quote in response.css('div.quote'):
+            yield {
+                'text': quote.css('span.text::text').get(),
+                'author': quote.css('small.author::text').get(),
+                'tags': quote.css('div.tags a.tag::text').getall(),
+            }
+</pre>
+<p>If you run this spider, it will output the extracted data with the log:</p>
+<pre class="literal-block">
+2016-09-19 18:57:19 [scrapy.core.scraper] DEBUG: Scraped from &lt;200 http://quotes.toscrape.com/page/1/&gt;
+{'tags': ['life', 'love'], 'author': 'André Gide', 'text': '“It is better to be hated for what you are than to be loved for what you are not.”'}
+2016-09-19 18:57:19 [scrapy.core.scraper] DEBUG: Scraped from &lt;200 http://quotes.toscrape.com/page/1/&gt;
+{'tags': ['edison', 'failure', 'inspirational', 'paraphrased'], 'author': 'Thomas A. Edison', 'text': &quot;“I have not failed. I've just found 10,000 ways that won't work.”&quot;}
+</pre>
+</div>
+</div>
+<div class="section" id="storing-the-scraped-data">
+<span id="storing-data"></span><h1>Storing the scraped data</h1>
+<p>The simplest way to store the scraped data is by using <a href="#id51"><span class="problematic" id="id52">:ref:`Feed exports
+&lt;topics-feed-exports&gt;`</span></a>, with the following command:</p>
+<div class="system-message" id="id51">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 443); <em><a href="#id52">backlink</a></em></p>
+Unknown interpreted text role &quot;ref&quot;.</div>
+<pre class="literal-block">
+scrapy crawl quotes -o quotes.json
+</pre>
+<p>That will generate an <tt class="docutils literal">quotes.json</tt> file containing all scraped items,
+serialized in <a href="#id77"><span class="problematic" id="id78">`JSON`_</span></a>.</p>
+<p>For historic reasons, Scrapy appends to a given file instead of overwriting
+its contents. If you run this command twice without removing the file
+before the second time, you'll end up with a broken JSON file.</p>
+<p>You can also use other formats, like <a class="reference external" href="http://jsonlines.org">JSON Lines</a>:</p>
+<pre class="literal-block">
+scrapy crawl quotes -o quotes.jl
+</pre>
+<p>The <a class="reference external" href="http://jsonlines.org">JSON Lines</a> format is useful because it's stream-like, you can easily
+append new records to it. It doesn't have the same problem of JSON when you run
+twice. Also, as each record is a separate line, you can process big files
+without having to fit everything in memory, there are tools like <a class="reference external" href="https://stedolan.github.io/jq">JQ</a> to help
+doing that at the command-line.</p>
+<p>In small projects (like the one in this tutorial), that should be enough.
+However, if you want to perform more complex things with the scraped items, you
+can write an <a href="#id53"><span class="problematic" id="id54">:ref:`Item Pipeline &lt;topics-item-pipeline&gt;`</span></a>. A placeholder file
+for Item Pipelines has been set up for you when the project is created, in
+<tt class="docutils literal">tutorial/pipelines.py</tt>. Though you don't need to implement any item
+pipelines if you just want to store the scraped items.</p>
+<div class="system-message" id="id53">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 465); <em><a href="#id54">backlink</a></em></p>
+Unknown interpreted text role &quot;ref&quot;.</div>
+</div>
+<div class="section" id="following-links">
+<h1>Following links</h1>
+<p>Let's say, instead of just scraping the stuff from the first two pages
+from <a class="reference external" href="http://quotes.toscrape.com">http://quotes.toscrape.com</a>, you want quotes from all the pages in the website.</p>
+<p>Now that you know how to extract data from pages, let's see how to follow links
+from them.</p>
+<p>First thing is to extract the link to the page we want to follow.  Examining
+our page, we can see there is a link to the next page with the following
+markup:</p>
+<pre class="code html literal-block">
+<span class="punctuation">&lt;</span><span class="name tag">ul</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;pager&quot;</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;</span><span class="name tag">li</span> <span class="name attribute">class</span><span class="operator">=</span><span class="literal string">&quot;next&quot;</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="name tag">a</span> <span class="name attribute">href</span><span class="operator">=</span><span class="literal string">&quot;/page/2/&quot;</span><span class="punctuation">&gt;</span>Next <span class="punctuation">&lt;</span><span class="name tag">span</span> <span class="name attribute">aria-hidden</span><span class="operator">=</span><span class="literal string">&quot;true&quot;</span><span class="punctuation">&gt;</span><span class="name entity">&amp;rarr;</span><span class="punctuation">&lt;/</span><span class="name tag">span</span><span class="punctuation">&gt;&lt;/</span><span class="name tag">a</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;/</span><span class="name tag">li</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;/</span><span class="name tag">ul</span><span class="punctuation">&gt;</span>
+</pre>
+<p>We can try extracting it in the shell:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css('li.next a').get()
+'&lt;a href=&quot;/page/2/&quot;&gt;Next &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;&lt;/a&gt;'
+</pre>
+<p>This gets the anchor element, but we want the attribute <tt class="docutils literal">href</tt>. For that,
+Scrapy supports a CSS extension that lets you select the attribute contents,
+like this:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css('li.next a::attr(href)').get()
+'/page/2/'
+</pre>
+<p>There is also an <tt class="docutils literal">attrib</tt> property available
+(see <a href="#id55"><span class="problematic" id="id56">:ref:`selecting-attributes`</span></a> for more):</p>
+<div class="system-message" id="id55">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 509); <em><a href="#id56">backlink</a></em></p>
+Unknown interpreted text role &quot;ref&quot;.</div>
+<pre class="doctest-block">
+&gt;&gt;&gt; response.css('li.next a').attrib['href']
+'/page/2/'
+</pre>
+<p>Let's see now our spider modified to recursively follow the link to the next
+page, extracting data from it:</p>
+<pre class="literal-block">
+import scrapy
+
+
+class QuotesSpider(scrapy.Spider):
+    name = &quot;quotes&quot;
+    start_urls = [
+        'http://quotes.toscrape.com/page/1/',
+    ]
+
+    def parse(self, response):
+        for quote in response.css('div.quote'):
+            yield {
+                'text': quote.css('span.text::text').get(),
+                'author': quote.css('small.author::text').get(),
+                'tags': quote.css('div.tags a.tag::text').getall(),
+            }
+
+        next_page = response.css('li.next a::attr(href)').get()
+        if next_page is not None:
+            next_page = response.urljoin(next_page)
+            yield scrapy.Request(next_page, callback=self.parse)
+</pre>
+<p>Now, after extracting the data, the <tt class="docutils literal">parse()</tt> method looks for the link to
+the next page, builds a full absolute URL using the
+<a href="#id57"><span class="problematic" id="id58">:meth:`~scrapy.http.Response.urljoin`</span></a> method (since the links can be
+relative) and yields a new request to the next page, registering itself as
+callback to handle the data extraction for the next page and to keep the
+crawling going through all the pages.</p>
+<div class="system-message" id="id57">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 541); <em><a href="#id58">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<p>What you see here is Scrapy's mechanism of following links: when you yield
+a Request in a callback method, Scrapy will schedule that request to be sent
+and register a callback method to be executed when that request finishes.</p>
+<p>Using this, you can build complex crawlers that follow links according to rules
+you define, and extract different kinds of data depending on the page it's
+visiting.</p>
+<p>In our example, it creates a sort of loop, following all the links to the next page
+until it doesn't find one -- handy for crawling blogs, forums and other sites with
+pagination.</p>
+<div class="section" id="a-shortcut-for-creating-requests">
+<span id="response-follow-example"></span><h2>A shortcut for creating Requests</h2>
+<p>As a shortcut for creating Request objects you can use
+<a href="#id59"><span class="problematic" id="id60">:meth:`response.follow &lt;scrapy.http.TextResponse.follow&gt;`</span></a>:</p>
+<div class="system-message" id="id59">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 566); <em><a href="#id60">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<pre class="literal-block">
+import scrapy
+
+
+class QuotesSpider(scrapy.Spider):
+    name = &quot;quotes&quot;
+    start_urls = [
+        'http://quotes.toscrape.com/page/1/',
+    ]
+
+    def parse(self, response):
+        for quote in response.css('div.quote'):
+            yield {
+                'text': quote.css('span.text::text').get(),
+                'author': quote.css('span small::text').get(),
+                'tags': quote.css('div.tags a.tag::text').getall(),
+            }
+
+        next_page = response.css('li.next a::attr(href)').get()
+        if next_page is not None:
+            yield response.follow(next_page, callback=self.parse)
+</pre>
+<p>Unlike scrapy.Request, <tt class="docutils literal">response.follow</tt> supports relative URLs directly - no
+need to call urljoin. Note that <tt class="docutils literal">response.follow</tt> just returns a Request
+instance; you still have to yield this Request.</p>
+<p>You can also pass a selector to <tt class="docutils literal">response.follow</tt> instead of a string;
+this selector should extract necessary attributes:</p>
+<pre class="literal-block">
+for href in response.css('ul.pager a::attr(href)'):
+    yield response.follow(href, callback=self.parse)
+</pre>
+<p>For <tt class="docutils literal">&lt;a&gt;</tt> elements there is a shortcut: <tt class="docutils literal">response.follow</tt> uses their href
+attribute automatically. So the code can be shortened further:</p>
+<pre class="literal-block">
+for a in response.css('ul.pager a'):
+    yield response.follow(a, callback=self.parse)
+</pre>
+<p>To create multiple requests from an iterable, you can use
+<a href="#id61"><span class="problematic" id="id62">:meth:`response.follow_all &lt;scrapy.http.TextResponse.follow_all&gt;`</span></a> instead:</p>
+<div class="system-message" id="id61">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 606); <em><a href="#id62">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<pre class="literal-block">
+anchors = response.css('ul.pager a')
+yield from response.follow_all(anchors, callback=self.parse)
+</pre>
+<p>or, shortening it further:</p>
+<pre class="literal-block">
+yield from response.follow_all(css='ul.pager a', callback=self.parse)
+</pre>
+</div>
+<div class="section" id="more-examples-and-patterns">
+<h2>More examples and patterns</h2>
+<p>Here is another spider that illustrates callbacks and following links,
+this time for scraping author information:</p>
+<pre class="literal-block">
+import scrapy
+
+
+class AuthorSpider(scrapy.Spider):
+    name = 'author'
+
+    start_urls = ['http://quotes.toscrape.com/']
+
+    def parse(self, response):
+        author_page_links = response.css('.author + a')
+        yield from response.follow_all(author_page_links, self.parse_author)
+
+        pagination_links = response.css('li.next a')
+        yield from response.follow_all(pagination_links, self.parse)
+
+    def parse_author(self, response):
+        def extract_with_css(query):
+            return response.css(query).get(default='').strip()
+
+        yield {
+            'name': extract_with_css('h3.author-title::text'),
+            'birthdate': extract_with_css('.author-born-date::text'),
+            'bio': extract_with_css('.author-description::text'),
+        }
+</pre>
+<p>This spider will start from the main page, it will follow all the links to the
+authors pages calling the <tt class="docutils literal">parse_author</tt> callback for each of them, and also
+the pagination links with the <tt class="docutils literal">parse</tt> callback as we saw before.</p>
+<p>Here we're passing callbacks to
+<a href="#id63"><span class="problematic" id="id64">:meth:`response.follow_all &lt;scrapy.http.TextResponse.follow_all&gt;`</span></a> as positional
+arguments to make the code shorter; it also works for
+<a href="#id65"><span class="problematic" id="id66">:class:`~scrapy.http.Request`</span></a>.</p>
+<div class="system-message" id="id63">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 652); <em><a href="#id64">backlink</a></em></p>
+Unknown interpreted text role &quot;meth&quot;.</div>
+<div class="system-message" id="id65">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 652); <em><a href="#id66">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+<p>The <tt class="docutils literal">parse_author</tt> callback defines a helper function to extract and cleanup the
+data from a CSS query and yields the Python dict with the author data.</p>
+<p>Another interesting thing this spider demonstrates is that, even if there are
+many quotes from the same author, we don't need to worry about visiting the
+same author page multiple times. By default, Scrapy filters out duplicated
+requests to URLs already visited, avoiding the problem of hitting servers too
+much because of a programming mistake. This can be configured by the setting
+<a href="#id67"><span class="problematic" id="id68">:setting:`DUPEFILTER_CLASS`</span></a>.</p>
+<div class="system-message" id="id67">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 660); <em><a href="#id68">backlink</a></em></p>
+Unknown interpreted text role &quot;setting&quot;.</div>
+<p>Hopefully by now you have a good understanding of how to use the mechanism
+of following links and callbacks with Scrapy.</p>
+<p>As yet another example spider that leverages the mechanism of following links,
+check out the <a href="#id69"><span class="problematic" id="id70">:class:`~scrapy.spiders.CrawlSpider`</span></a> class for a generic
+spider that implements a small rules engine that you can use to write your
+crawlers on top of it.</p>
+<div class="system-message" id="id69">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 670); <em><a href="#id70">backlink</a></em></p>
+Unknown interpreted text role &quot;class&quot;.</div>
+<p>Also, a common pattern is to build an item with data from more than one page,
+using a <a href="#id71"><span class="problematic" id="id72">:ref:`trick to pass additional data to the callbacks
+&lt;topics-request-response-ref-request-callback-arguments&gt;`</span></a>.</p>
+<div class="system-message" id="id71">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 675); <em><a href="#id72">backlink</a></em></p>
+Unknown interpreted text role &quot;ref&quot;.</div>
+</div>
+</div>
+<div class="section" id="using-spider-arguments">
+<h1>Using spider arguments</h1>
+<p>You can provide command line arguments to your spiders by using the <tt class="docutils literal"><span class="pre">-a</span></tt>
+option when running them:</p>
+<pre class="literal-block">
+scrapy crawl quotes -o quotes-humor.json -a tag=humor
+</pre>
+<p>These arguments are passed to the Spider's <tt class="docutils literal">__init__</tt> method and become
+spider attributes by default.</p>
+<p>In this example, the value provided for the <tt class="docutils literal">tag</tt> argument will be available
+via <tt class="docutils literal">self.tag</tt>. You can use this to make your spider fetch only quotes
+with a specific tag, building the URL based on the argument:</p>
+<pre class="literal-block">
+import scrapy
+
+
+class QuotesSpider(scrapy.Spider):
+    name = &quot;quotes&quot;
+
+    def start_requests(self):
+        url = 'http://quotes.toscrape.com/'
+        tag = getattr(self, 'tag', None)
+        if tag is not None:
+            url = url + 'tag/' + tag
+        yield scrapy.Request(url, self.parse)
+
+    def parse(self, response):
+        for quote in response.css('div.quote'):
+            yield {
+                'text': quote.css('span.text::text').get(),
+                'author': quote.css('small.author::text').get(),
+            }
+
+        next_page = response.css('li.next a::attr(href)').get()
+        if next_page is not None:
+            yield response.follow(next_page, self.parse)
+</pre>
+<p>If you pass the <tt class="docutils literal">tag=humor</tt> argument to this spider, you'll notice that it
+will only visit URLs from the <tt class="docutils literal">humor</tt> tag, such as
+<tt class="docutils literal"><span class="pre">http://quotes.toscrape.com/tag/humor</span></tt>.</p>
+<p>You can <a href="#id73"><span class="problematic" id="id74">:ref:`learn more about handling spider arguments here &lt;spiderargs&gt;`</span></a>.</p>
+<div class="system-message" id="id73">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 724); <em><a href="#id74">backlink</a></em></p>
+Unknown interpreted text role &quot;ref&quot;.</div>
+</div>
+<div class="section" id="what-to-submit">
+<h1>What to Submit</h1>
+<p>In order to get this mini project marked as completed, you will need to share both
+the code you wrote by working alongside the tutorial, as well as the data scraped
+using the 2 different kind of spiders (toscrape-css.py and toscrape-xpath.py) to
+verify they are working as expected and generate the proper output.</p>
+<p>Make sure you execute the following 2 commands in order to capture the data scraped
+and save it as a JSON file:
+<cite>scrapy crawl toscrape-css -o css-scraper-results.json</cite>
+as well as:
+<cite>scrapy crawl toscrape-xpath -o xpath-scraper-results.json</cite></p>
+</div>
+<div class="section" id="going-further">
+<h1>Going further</h1>
+<p>JSON files are great for gather raw data in an semi structured way to store it.
+However, what about if you wanted to search by tag, or by author, or be able to run a
+full-text search to find your favorite quote in the data you harvested? While you will
+learn on how to analyze data directly from raw JSON files, it is sometimes recommended
+to load your data into a more interactive backend for better exploration capabilities.</p>
+<p>A bonus exercise is left to the reader which is to convert the json data collected
+into a structured RDBMS table, which can be queried using SQL afterwards. Since, scalibility
+is not a concern here, a great and simple solution would be to design a simple SQLlite3 database
+for the job. In real-life, when scraping data, the amount of data generated is usually quite large,
+therefore RDBMS databases such as MySQL or Postgres would be more suited in that case.</p>
+<p>SQLLite3 has a lot of simple tutorials available at: <a class="reference external" href="https://www.sqlitetutorial.net/">https://www.sqlitetutorial.net/</a>
+Submit what one SQLLite3 table schema might look like to store and query the data Scraped
+via this tutorial, and write a small python script that can easily read the json files generated
+by the spiders you built, and insert each record into that table (or tables).</p>
+</div>
+<div class="system-messages section">
+<h1>Docutils System Messages</h1>
+<div class="system-message" id="id75">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 10); <em><a href="#id76">backlink</a></em></p>
+Unknown target name: &quot;pip install scrapy&quot;.</div>
+<div class="system-message" id="id77">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">./scrapy-mini-project.rst</tt>, line 448); <em><a href="#id78">backlink</a></em></p>
+Unknown target name: &quot;json&quot;.</div>
+</div>
+</div>
+</body>
+</html>
