@@ -15,11 +15,12 @@ class CSSQuoteSpider(scrapy.Spider):
     def parse(self, response):
         for quote in response.xpath('//div[@class="quote"]'):
             yield {
-                'text': quote.xpath('./span/text()').get(),
-                'author': quote.xpath('./span/small/text()').get(),
+                'text': quote.xpath('./span[@class="text"]/text()').extract_first(),
+                'author': quote.xpath('./span/small[@class="author"]/text()').extract_first(),
             }
 
-        #next_page = response.xpath('//li/a/@href').get()
-        next_page = response.css('li.next a::attr(href)').get()
+        next_page = response.xpath(
+            '//li[@class="next"]/a/@href').extract_first()
+        #next_page = response.css('li.next a::attr(href)').get()
         if next_page is not None:
             yield response.follow(next_page, callback=self.parse)
